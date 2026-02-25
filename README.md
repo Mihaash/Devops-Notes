@@ -21,7 +21,7 @@ It is a **step-by-step process** used by software developers and organizations t
 
 ---
 
-## 📘 SDLC Phases
+## SDLC Phases
 
 | **Phase**       | **Purpose**                                                    | **Main Deliverables**                            |
 |------------------|----------------------------------------------------------------|--------------------------------------------------|
@@ -111,7 +111,7 @@ Its goal is to **automate and shorten the software delivery cycle** using tools 
 
 ---
 
-## 🔧 What Jenkins Does
+## What Jenkins Does
 
 Jenkins automates repetitive tasks in software development:
 
@@ -122,7 +122,7 @@ Jenkins automates repetitive tasks in software development:
 
 ---
 
-## ⚙️ How Jenkins Works (Simplified Flow)
+## How Jenkins Works (Simplified Flow)
 
 1. Developer commits code → e.g., pushes to GitHub  
 2. Jenkins detects the change (via webhook or polling)  
@@ -137,16 +137,16 @@ It supports many languages like **Java, Python, JavaScript, C#, PHP, C/C++, Go, 
 
 ---
 
-## ⚙️ What SonarQube Does
+## What SonarQube Does
 
 SonarQube analyzes code for:
 
-- 🐞 **Bugs** – Code that can cause malfunction.  
-- 🧨 **Vulnerabilities** – Security risks like SQL injection or XSS.  
-- 💨 **Code Smells** – Poor design choices that affect maintainability.  
-- 🧾 **Duplications** – Repeated blocks of code.  
-- 📊 **Code Coverage** – How much of your code is covered by tests.  
-- 🔍 **Technical Debt** – Estimated time to fix all maintainability issues.  
+-  **Bugs** – Code that can cause malfunction.  
+-  **Vulnerabilities** – Security risks like SQL injection or XSS.  
+-  **Code Smells** – Poor design choices that affect maintainability.  
+-  **Duplications** – Repeated blocks of code.  
+-  **Code Coverage** – How much of your code is covered by tests.  
+- **Technical Debt** – Estimated time to fix all maintainability issues.  
 
 ## DevOps Lifecycle:
 
