@@ -159,3 +159,456 @@ Deploy: Ansible, Terraform
 Operate: Kubernetes, AWS ECS
 Monitor: Prometheus, Grafana, ELK Stack
 
+
+## Day 03(AWS)
+## What is Cloud?
+
+**Cloud (Cloud Computing)** means using **remote servers on the internet** to store data, run applications, and process information — instead of using your own local computer.
+
+## What is AWS?
+
+Amazon Web Services (AWS) is a **cloud computing platform** by Amazon that lets you:
+
+- Create virtual servers
+    
+- Store data
+    
+- Host websites
+    
+- Run applications
+    
+- Build security systems
+    
+- Deploy DevOps pipelines
+    
+
+Instead of buying physical servers, you **rent infrastructure online**.
+# EC2 (Elastic Compute Cloud)
+
+Amazon Web Services EC2 = **Virtual Server in the cloud**
+
+It is just like:
+
+- Your laptop
+    
+- But running inside AWS data center
+    
+
+You can:
+
+- Install Linux
+    
+- Install tools (Nmap, Docker, etc.)
+    
+- Host websites
+    
+- Run scanners
+    
+- Deploy apps
+
+# VPC (Virtual Private Cloud)
+
+VPC = **Your own private network inside AWS**
+
+Think of it like:
+
+> 🏠 A private apartment building in the cloud
+
+Inside VPC you control:
+
+- IP ranges
+    
+- Subnets
+    
+- Routing
+    
+- Firewalls
+# 3️⃣ Subnet
+
+Subnet = Small network inside VPC.
+
+Two types:
+
+### 🟢 Public Subnet
+
+- Has internet access
+    
+- Used for:
+    
+    - Web servers
+        
+    - Bastion host
+        
+    - Public EC2
+        
+
+### 🔒 Private Subnet
+
+- No direct internet
+    
+- Used for:
+    
+    - Database
+        
+    - Backend servers
+        
+    - Internal apps
+# Internet Gateway (IGW)
+
+IGW = Allows VPC to connect to the Internet.
+
+Without IGW:  
+❌ No internet access
+
+With IGW:  
+✅ Public EC2 can access internet
+
+## What is S3?
+
+Amazon Web Services **S3 (Simple Storage Service)** is a cloud storage service used to store and retrieve **any amount of data** from anywhere on the internet.
+
+> ☁️ Google Drive — but for developers and companies.
+
+---
+
+# 🏗 How S3 Works
+
+S3 stores data in:
+
+- 🪣 **Buckets** → like folders
+    
+- 📄 **Objects** → files inside bucket
+    
+- 🏷 Metadata → information about files
+
+# S3 Storage Classes
+| Class                 | Use Case                    |
+|-----------------------|----------------------------|
+| Standard              | Frequently accessed        |
+| Intelligent-Tiering   | Auto cost optimization     |
+| Standard-IA           | Rarely accessed            |
+| Glacier               | Archive                    |
+| Glacier Deep Archive  | Long-term backup           |
+
+# AWS Service Models
+
+## 1️⃣ IaaS — Infrastructure as a Service
+
+You get:
+
+- Virtual machines
+    
+- Storage
+    
+- Networking
+    
+
+You manage:
+
+- OS
+    
+- Applications
+    
+- Security patches
+    
+
+AWS gives:
+
+- Hardware
+    
+- Virtualization
+    
+- Data center
+    
+
+### AWS Examples:
+
+- EC2
+    
+- EBS
+    
+- VPC
+## 2️⃣ PaaS — Platform as a Service
+
+You get:
+
+- Platform to deploy apps
+    
+- Managed runtime
+    
+- Managed infrastructure
+    
+
+You manage:
+
+- Application code only
+    
+
+AWS manages:
+
+- OS
+    
+- Server
+    
+- Scaling
+    
+
+### AWS Examples:
+
+- Elastic Beanstalk
+    
+- Lambda
+    
+- RDS
+## 3️⃣ SaaS — Software as a Service
+
+You just use the software.
+
+You manage:
+
+- Nothing technical
+    
+
+Provider manages:
+
+- Everything
+    
+
+Examples (not directly AWS services):
+
+- Gmail
+    
+- Microsoft 365
+    
+- Slack
+# 🖥 1️⃣ Compute Services
+
+Used to run applications and servers.
+
+- **EC2** → Virtual machines
+    
+- **Lambda** → Run code without servers
+    
+- **Elastic Beanstalk** → Deploy apps easily
+    
+- **ECS / EKS** → Run Docker & Kubernetes
+    
+
+💡 Example: Hosting your vulnerability scanner on EC2.
+
+---
+
+# 📦 2️⃣ Storage Services
+
+Used to store data.
+
+- **S3** → Object storage
+    
+- **EBS** → Hard disk for EC2
+    
+- **EFS** → Shared file storage
+    
+- **Glacier** → Archive storage
+    
+
+💡 Example: Store logs or reports in S3.
+
+---
+
+# 🗄 3️⃣ Database Services
+
+Managed databases.
+
+- **RDS** → MySQL, PostgreSQL, etc.
+    
+- **DynamoDB** → NoSQL database
+    
+- **Aurora** → High-performance database
+    
+- **Redshift** → Data warehouse
+    
+
+💡 Example: Store user data in RDS.
+
+---
+
+# 🌐 4️⃣ Networking Services
+
+Control traffic and connectivity.
+
+- **VPC** → Private network
+    
+- **Route 53** → DNS service
+    
+- **CloudFront** → CDN
+    
+- **Elastic Load Balancer (ELB)** → Distribute traffic
+    
+
+💡 Example: Public subnet + private subnet inside VPC.
+
+---
+
+# 🔐 5️⃣ Security Services (Very Important 🔥)
+
+- **IAM** → Access control
+    
+- **CloudTrail** → Logs API activity
+    
+- **GuardDuty** → Threat detection
+    
+- **WAF** → Web firewall
+    
+- **Shield** → DDoS protection
+    
+- **KMS** → Encryption keys
+    
+
+💡 Used in SOC & Cloud Security roles.
+
+---
+
+# 📊 6️⃣ Monitoring & DevOps
+
+- **CloudWatch** → Monitoring & logs
+    
+- **CodePipeline** → CI/CD
+    
+- **CodeBuild** → Build automation
+    
+- **CodeDeploy** → Deployment automation
+
+
+## What is CIDR?
+
+**CIDR (Classless Inter-Domain Routing)** is a method used in IP networking to allocate IP addresses and define network ranges more efficiently than the old class-based system (Class A, B, C).
+
+It helps in:
+
+- Reducing wasted IP addresses
+    
+- Controlling network size
+    
+- Improving routing efficiency
+
+## CIDR Quick Table
+| CIDR | Subnet Mask       | Total IPs    | Usable Hosts   |
+|------|-------------------|-------------|---------------|
+| /8   | 255.0.0.0         | 16,777,216  | 16,777,214    |
+| /16  | 255.255.0.0       | 65,536      | 65,534        |
+| /24  | 255.255.255.0     | 256         | 254           |
+| /30  | 255.255.255.252   | 4           | 2             |
+
+![aws](images/VPC.png)
+
+
+## Create Subnet 1
+
+- VPC → Select your VPC
+    
+- Subnet name → `mysub1`
+    
+- Availability Zone → us-east-1a (example)
+    
+- IPv4 CIDR →
+    
+    10.0.1.0/24
+    
+- Create subnet
+    
+
+---
+
+## Create Subnet 2
+
+- VPC → Same VPC
+    
+- Subnet name → `mysub2`
+    
+- Availability Zone → us-east-1b (recommended different AZ)
+    
+- IPv4 CIDR →
+    
+    10.0.2.0/24
+    
+- Create
+![aws](images/VPC2.png)
+
+# Step 1: Go to Route Tables
+
+AWS Console → VPC → Route Tables
+
+You will see a default route table.
+
+---
+
+# Step 2: Add Internet Route
+
+1. Select your Route Table (the one associated with your VPC)
+    
+2. Go to **Routes tab**
+    
+3. Click **Edit routes**
+    
+4. Add route:
+    
+
+Destination:
+
+0.0.0.0/0
+
+![aws](images/internetgateway.png)
+
+# 🔎 Enable Auto Public IP
+
+Go to:
+
+VPC → Subnets → testing-sub-01  
+Actions → Edit subnet settings
+
+Enable:  
+✔ Auto-assign public IPv4 address
+![SSH](images/EC2.png)
+
+![aws](images/internetgateway.png)
+
+- Instance state → **Running**
+    
+- Instance type → `t3.micro`
+    
+- Public IP → **44.195.35.72**
+    
+- Private IP → 11.0.2.98
+    
+- Region → **us-east-1 (N. Virginia)**
+
+![aws](images/EC2-1.png)
+
+- Connected to EC2 (Ubuntu)
+    
+- ✅ Installed Apache
+    
+- ✅ Navigated to `/var/www/html`
+    
+- ✅ Verified `index.html` exists
+Add this rule:
+
+|Type|Protocol|Port|Source|
+|---|---|---|---|
+|HTTP|TCP|80|0.0.0.0/0|
+
+![aws](images/create-file.png)
+
+sudo nano /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihaash DevOps Server</title>
+</head>
+<body>
+    <h1>Hello from EC2 🚀</h1>
+    <h2>Deployed by Mihaash</h2>
+</body>
+</html>
+![aws](images/running.png)
+
