@@ -160,7 +160,7 @@ Operate: Kubernetes, AWS ECS
 Monitor: Prometheus, Grafana, ELK Stack
 
 
-## Day 03(AWS)
+## DAY 03(AWS)
 ## What is Cloud?
 
 **Cloud (Cloud Computing)** means using **remote servers on the internet** to store data, run applications, and process information — instead of using your own local computer.
@@ -212,7 +212,7 @@ VPC = **Your own private network inside AWS**
 
 Think of it like:
 
-> 🏠 A private apartment building in the cloud
+>  A private apartment building in the cloud
 
 Inside VPC you control:
 
@@ -223,13 +223,13 @@ Inside VPC you control:
 - Routing
     
 - Firewalls
-# 3️⃣ Subnet
+#  Subnet
 
 Subnet = Small network inside VPC.
 
 Two types:
 
-### 🟢 Public Subnet
+###  Public Subnet
 
 - Has internet access
     
@@ -242,7 +242,7 @@ Two types:
     - Public EC2
         
 
-### 🔒 Private Subnet
+###  Private Subnet
 
 - No direct internet
     
@@ -267,7 +267,7 @@ With IGW:
 
 Amazon Web Services **S3 (Simple Storage Service)** is a cloud storage service used to store and retrieve **any amount of data** from anywhere on the internet.
 
-> ☁️ Google Drive — but for developers and companies.
+>  Google Drive — but for developers and companies.
 
 ---
 
@@ -275,11 +275,11 @@ Amazon Web Services **S3 (Simple Storage Service)** is a cloud storage service u
 
 S3 stores data in:
 
-- 🪣 **Buckets** → like folders
+-  **Buckets** → like folders
     
-- 📄 **Objects** → files inside bucket
+-  **Objects** → files inside bucket
     
-- 🏷 Metadata → information about files
+-  Metadata → information about files
 
 # S3 Storage Classes
 | Class                 | Use Case                    |
@@ -292,7 +292,7 @@ S3 stores data in:
 
 # AWS Service Models
 
-## 1️⃣ IaaS — Infrastructure as a Service
+##  IaaS — Infrastructure as a Service
 
 You get:
 
@@ -328,7 +328,7 @@ AWS gives:
 - EBS
     
 - VPC
-## 2️⃣ PaaS — Platform as a Service
+##  PaaS — Platform as a Service
 
 You get:
 
@@ -360,7 +360,7 @@ AWS manages:
 - Lambda
     
 - RDS
-## 3️⃣ SaaS — Software as a Service
+##  SaaS — Software as a Service
 
 You just use the software.
 
@@ -381,7 +381,7 @@ Examples (not directly AWS services):
 - Microsoft 365
     
 - Slack
-# 🖥 1️⃣ Compute Services
+#  Compute Services
 
 Used to run applications and servers.
 
@@ -394,11 +394,11 @@ Used to run applications and servers.
 - **ECS / EKS** → Run Docker & Kubernetes
     
 
-💡 Example: Hosting your vulnerability scanner on EC2.
+ Example: Hosting your vulnerability scanner on EC2.
 
 ---
 
-# 📦 2️⃣ Storage Services
+#  Storage Services
 
 Used to store data.
 
@@ -411,11 +411,11 @@ Used to store data.
 - **Glacier** → Archive storage
     
 
-💡 Example: Store logs or reports in S3.
+ Example: Store logs or reports in S3.
 
 ---
 
-# 🗄 3️⃣ Database Services
+#  Database Services
 
 Managed databases.
 
@@ -428,11 +428,11 @@ Managed databases.
 - **Redshift** → Data warehouse
     
 
-💡 Example: Store user data in RDS.
+ Example: Store user data in RDS.
 
 ---
 
-# 🌐 4️⃣ Networking Services
+# Networking Services
 
 Control traffic and connectivity.
 
@@ -445,11 +445,11 @@ Control traffic and connectivity.
 - **Elastic Load Balancer (ELB)** → Distribute traffic
     
 
-💡 Example: Public subnet + private subnet inside VPC.
+ Example: Public subnet + private subnet inside VPC.
 
 ---
 
-# 🔐 5️⃣ Security Services (Very Important 🔥)
+# Security Services (Very Important )
 
 - **IAM** → Access control
     
@@ -464,11 +464,11 @@ Control traffic and connectivity.
 - **KMS** → Encryption keys
     
 
-💡 Used in SOC & Cloud Security roles.
+ Used in SOC & Cloud Security roles.
 
 ---
 
-# 📊 6️⃣ Monitoring & DevOps
+# Monitoring & DevOps
 
 - **CloudWatch** → Monitoring & logs
     
@@ -559,7 +559,7 @@ Destination:
 
 ![aws](images/internetgateway.png)
 
-# 🔎 Enable Auto Public IP
+#  Enable Auto Public IP
 
 Go to:
 
@@ -586,11 +586,11 @@ Enable:
 
 - Connected to EC2 (Ubuntu)
     
-- ✅ Installed Apache
+-  Installed Apache
     
-- ✅ Navigated to `/var/www/html`
+-  Navigated to `/var/www/html`
     
-- ✅ Verified `index.html` exists
+-  Verified `index.html` exists
 Add this rule:
 
 |Type|Protocol|Port|Source|
