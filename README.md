@@ -499,7 +499,7 @@ It helps in:
 | /24  | 255.255.255.0     | 256         | 254           |
 | /30  | 255.255.255.252   | 4           | 2             |
 
-![aws](images/VPC.png)
+![aws](images/day3/VPC.png)
 
 
 ## Create Subnet 1
@@ -532,7 +532,7 @@ It helps in:
     10.0.2.0/24
     
 - Create
-![aws](images/VPC2.png)
+![aws](images/day3/VPC2.png)
 
 # Step 1: Go to Route Tables
 
@@ -557,7 +557,7 @@ Destination:
 
 0.0.0.0/0
 
-![aws](images/internetgateway.png)
+![aws](mages/day3/internetgateway.png)
 
 #  Enable Auto Public IP
 
@@ -568,9 +568,9 @@ Actions → Edit subnet settings
 
 Enable:  
 ✔ Auto-assign public IPv4 address
-![SSH](images/EC2.png)
+![SSH](images/day3/EC2.png)
 
-![aws](images/internetgateway.png)
+![aws](images/day3/internetgateway.png)
 
 - Instance state → **Running**
     
@@ -582,7 +582,7 @@ Enable:
     
 - Region → **us-east-1 (N. Virginia)**
 
-![aws](images/EC2-1.png)
+![aws](images/day3/EC2-1.png)
 
 - Connected to EC2 (Ubuntu)
     
@@ -597,10 +597,10 @@ Add this rule:
 |---|---|---|---|
 |HTTP|TCP|80|0.0.0.0/0|
 
-![aws](images/create-file.png)
+![aws](images/day3/create-file.png)
 
 sudo nano /var/www/html/index.html
-![aws](images/running.png)
+![aws](images/day3/running.png)
 
 
 
@@ -666,7 +666,7 @@ Block all public access
 ![aws](images/day4/Screenshot_2026-02-26_12.38.45.png)
 - For **Everyone (public access)** → ☑ Read is checked
 
-![aws](images/Screenshot_2026-02-26_12.37.16.png)
+![aws](images/day4/Screenshot_2026-02-26_12.37.16.png)
 ✅ This file is now PRIVATE  
 ❌ Not accessible publicly  
 ❌ Will return 403 if accessed directly
@@ -675,7 +675,7 @@ Block all public access
 ![aws](images/day4/Screenshot_2026-02-26_12.38.52.png)
 ![aws](images/day4/Screenshot_2026-02-26_12.39.12.png)
 aws s3 cp 04f821c58a65f87cbac60022bb00b2b4.jpg s3://testing-cli06/
-file is uploaded successfully via CLI.
+- file is uploaded successfully via CLI.
 ![aws](images/day4/Screenshot_2026-02-26_15.11.40.png)
 ![aws](images/day4/Screenshot_2026-02-26_16.04.18.png)
 
