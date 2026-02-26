@@ -600,15 +600,86 @@ Add this rule:
 ![aws](images/create-file.png)
 
 sudo nano /var/www/html/index.html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mihaash DevOps Server</title>
-</head>
-<body>
-    <h1>Hello from EC2 🚀</h1>
-    <h2>Deployed by Mihaash</h2>
-</body>
-</html>
 ![aws](images/running.png)
+
+
+
+## DAY 04
+##  What is Amazon S3?
+**Amazon S3 (Simple Storage Service)** is a cloud storage service provided by **Amazon Web Services (AWS)** that lets you **store and retrieve any amount of data from anywhere**.
+> S3 is an **object storage service** used to store files like:
+
+- Images
+    
+- Videos
+    
+- Backups
+    
+- Logs
+    
+- Website files
+    
+- Big data files
+
+
+![aws](images/day4/Screenshot_2026-02-26_12.27.08.png)
+
+![aws](images/day4/Screenshot_2026-02-26_12.28.28.png)
+- Bucket name: **testing-application06**
+    
+- Region: **us-east-1**
+    
+- It is empty (no objects uploaded yet)
+#  Step 1: Upload index.html
+
+Click **Upload → Add files**
+After upload, you should see:
+
+#  Step 2: Enable Static Website Hosting
+
+Go to:
+
+**Properties → Static website hosting → Edit**
+# Disable Block Public Access 
+
+**Permissions → Block public access**
+
+Block all public access
+
+![aws](images/day4/Screenshot_2026-02-26_12.30.46.png)
+![aws](images/day4/Screenshot_2026-02-26_12.32.44.png)
+![aws](images/day4/Screenshot_2026-02-26_12.33.18.png)
+![aws](images/day4/Screenshot_2026-02-26_12.33.27.png)
+![aws](images/day4/Screenshot_2026-02-26_12.34.09.png)
+![aws](images/day4/Screenshot_2026-02-26_12.34.23.png)
+![aws](images/day4/Screenshot_2026-02-26_12.34.39.png)
+![aws](images/day4/Screenshot_2026-02-26_12.35.59.png)
+- One image → **Public**
+    
+- 🔒 One image → **Private**
+
+![aws](images/day4/Screenshot_2026-02-26_12.37.06.png)
+![aws](images/day4/Screenshot_2026-02-26_12.37.16.png)
+
+
+
+![aws](images/day4/Screenshot_2026-02-26_12.38.45.png)
+- For **Everyone (public access)** → ☑ Read is checked
+
+![aws](images/Screenshot_2026-02-26_12.37.16.png)
+✅ This file is now PRIVATE  
+❌ Not accessible publicly  
+❌ Will return 403 if accessed directly
+
+
+![aws](images/day4/Screenshot_2026-02-26_12.38.52.png)
+![aws](images/day4/Screenshot_2026-02-26_12.39.12.png)
+aws s3 cp 04f821c58a65f87cbac60022bb00b2b4.jpg s3://testing-cli06/
+file is uploaded successfully via CLI.
+![aws](images/day4/Screenshot_2026-02-26_15.11.40.png)
+![aws](images/day4/Screenshot_2026-02-26_16.04.18.png)
+
+
+
+
 
