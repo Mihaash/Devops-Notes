@@ -557,7 +557,7 @@ Destination:
 
 0.0.0.0/0
 
-![aws](mages/day3/internetgateway.png)
+![aws](images/day3/internetgateway.png)
 
 #  Enable Auto Public IP
 
