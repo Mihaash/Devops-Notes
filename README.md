@@ -690,6 +690,95 @@ aws s3 cp 04f821c58a65f87cbac60022bb00b2b4.jpg s3://testing-cli06/
 ![aws](images/day4/Screenshot_2026-02-26_16.04.18.png)
 
 
+## DAY 5
+
+# What is Git?
+
+**Git** is a **version control system (VCS)**.
+
+It is a tool used to:
+
+- Track changes in code
+    
+- Maintain version history
+    
+- Work with branches
+    
+- Collaborate safely
+    
+- Restore older versions
+    
+
+Git works on your local computer.
+
+
+
+Edit file
+   ↓
+Working Directory
+   ↓ (git add)
+Staging Area
+   ↓ (git commit)
+Local Repository
+   ↓ (git push)
+Remote Repository
+
+git
+
+---
+
+# What is `git init`?
+
+`git init` is the command used to:
+
+> Initialize (start) a new Git repository in a folder.
+
+![git](images/day5/Screenshot_2026-02-27_11.34.48.png)
+
+`git status` is a command used to:
+
+> Show the current state of your working directory and staging area.
+![git](images/day5/Screenshot_2026-02-27_11.35.39.png)
+
+`git log` is a command used to:
+
+> Show the commit history of your Git repository.
+
+![git](images/day5/Screenshot_2026-02-27_11.36.27.png)
+![git](images/day5/Screenshot_2026-02-27_11.52.01.png)
+
+git remote add origin
+> Connect your local Git repository to a remote repository (like GitHub).
+git remote add origin <repository-URL>
+![git](images/day5/Screenshot_2026-02-27_11.54.33.png)
+![git](images/day5/Screenshot_2026-02-27_11.55.05.png)
+
+`git push` is used to:
+
+> Upload your local commits to a remote repository (like GitHub).
+
+
+![git](images/day5/Screenshot_2026-02-27_12.13.37.png)
+![git](images/day5/Screenshot_2026-02-27_11.34.48.png)
+
+
+
+# 🌍 What is GitHub?
+
+GitHub is a **cloud platform that hosts Git repositories**.
+
+It is used to:
+
+- Store repositories online
+    
+- Collaborate with teams
+    
+- Manage pull requests
+    
+- Run CI/CD
+    
+- Review code
+
 
 
 
