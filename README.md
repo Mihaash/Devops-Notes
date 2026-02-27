@@ -608,7 +608,17 @@ sudo nano /var/www/html/index.html
 ##  What is Amazon S3?
 **Amazon S3 (Simple Storage Service)** is a cloud storage service provided by **Amazon Web Services (AWS)** that lets you **store and retrieve any amount of data from anywhere**.
 > S3 is an **object storage service** used to store files like:
+# AWS S3 Storage Classes Comparison
 
+| Storage Class | Best For | Storage Cost | Retrieval Cost | Access Speed | Availability | Stored In |
+|---------------|----------|--------------|----------------|--------------|--------------|-----------|
+| S3 Standard | Frequently used data | High | No | Milliseconds | 99.99% | Multi-AZ |
+| S3 Intelligent-Tiering | Unknown access pattern | Medium | Small monitoring fee | Milliseconds | 99.9% | Multi-AZ |
+| S3 Standard-IA | Rare access but fast needed | Lower | Yes | Milliseconds | 99.9% | Multi-AZ |
+| S3 One Zone-IA | Non-critical rare data | Even lower | Yes | Milliseconds | 99.5% | Single AZ |
+| S3 Glacier Instant Retrieval | Archive but instant access | Cheap | Yes | Milliseconds | 99.9% | Multi-AZ |
+| S3 Glacier Flexible Retrieval | Long-term archive | Very cheap | Yes | Minutes–Hours | 99.99% durability | Multi-AZ |
+| S3 Glacier Deep Archive | 7–10 year backup | Cheapest | Yes | 12+ Hours | 99.99% durability | Multi-AZ |
 - Images
     
 - Videos
