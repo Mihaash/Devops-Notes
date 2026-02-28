@@ -780,5 +780,73 @@ It is used to:
 - Review code
 
 
+##  DAY 6
+# What Is a Branch in Git?
 
+A **branch** is:
+
+> 🧠 A separate line of development in your project.
+
+It allows you to:
+
+- Work on new features
+    
+- Fix bugs
+
+![git](images/day6/Screenshot_2026-02-28_12.21.09.png)
+git switch -c testing
+![git](images/day6/Screenshot_2026-02-28_12.22.55.png)
+![git](images/day6/Screenshot_2026-02-28_12.27.18.png)
+
+
+![git](images/day6/Screenshot_2026-02-28_12.28.44.png)
+- You are on the **testing** branch.
+    
+- You added a new file `git.txt`.
+    
+- You committed it with message `"new file"`.
+    
+- You pushed it to GitHub using `git push -u origin testing`.
+    
+- Now your local branch is connected to GitHub and everything is up to date. 
+
+![git](images/day6/Screenshot_2026-02-28_12.33.59.png)
+![git](images/day6/Screenshot_2026-02-28_12.34.39.png)
+![git](images/day6/Screenshot_2026-02-28_12.39.20.png)
+
+![git](images/day6/Screenshot_2026-02-28_12.39.51.png)
+
+
+![git](images/day6/Screenshot_2026-02-28_12.48.47.png)
+![git](images/day6/Screenshot_2026-02-28_12.49.49.png)
+git branch -r      # Shows remote branches (branches on GitHub)
+
+origin/HEAD -> origin/main   # Default branch on remote is main
+origin/main                 # Remote main branch
+origin/testing              # Remote testing branch
+
+![git](images/day6/Screenshot_2026-02-28_13.13.20.png)
+
+![git](images/day6/Screenshot_2026-02-28_14.28.53.png)
+### What is **Git Stash**?
+
+**Git stash** is used to temporarily save your uncommitted changes  
+so you can switch branches without committing them.
+
+![git](images/day6/Screenshot_2026-02-28_14.57.28.png)
+
+
+![git](images/day6/Screenshot_2026-02-28_15.00.49.png)
+### What is `git stash pop`?
+
+**`git stash pop`** is used to:
+
+> Bring back your saved (stashed) changes  
+>  And remove them from the stash list
+![git](images/day6/Screenshot_2026-02-28_15.01.31.png)
+### What is **Git Merge**?
+
+**Merge** means:
+
+>  Combine one branch into another branch.
 
