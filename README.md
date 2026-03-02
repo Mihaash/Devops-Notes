@@ -850,3 +850,306 @@ so you can switch branches without committing them.
 
 >  Combine one branch into another branch.
 
+## DAY 7
+### What is Docker?
+
+**Docker** is a tool that lets you:
+
+>  Package an application and run it anywhere using containers.
+
+Docker = **Run your app inside a lightweight box (container).**
+
+That box includes:
+
+- Your app
+    
+- Required libraries
+    
+- Dependencies
+    
+- Runtime
+### What is a Docker Registry?
+
+A **Docker Registry** is:
+
+>  A place where Docker images are stored and shared.
+
+### What is a Docker Image?
+
+A **Docker Image** is:
+
+>  A blueprint (template) used to create Docker containers.
+
+Docker Image = **App + dependencies + instructions**  
+Container = **Running version of that image**
+
+### What is a Docker Container?
+
+A **Docker Container** is:
+
+> A running instance of a Docker image.
+
+### Dockerfile
+
+Left side box = **Docker File**
+
+This contains instructions to build your application.  
+Example: install Python, copy code, run app.
+
+
+![Docker](images/day7/8765d676-8627-41c5-8474-94f2a36f9ed2.png)
+
+
+Docker Image
+
+From Dockerfile → you create a **Docker Image**.
+
+docker build -t myapp .
+ Image = packaged application (blueprint).  
+It is not running yet.
+
+---
+
+###  Docker Container
+From Image → you create a **Container**.
+
+docker run myapp
+Container = running application.
+
+In your diagram:
+
+- Image creates Container
+    
+- It runs inside a system (VM or server)
+    
+
+---
+
+### Docker Hub
+
+After building image, you push it to:
+
+ **Docker Hub (Registry)**
+docker push myapp
+
+Docker Hub = storage for images.
+
+---
+
+###  Staging Server
+
+Server pulls image from Docker Hub:
+
+docker pull myapp  
+
+Screenshot_2026-03-02_11.51.21.png
+
+
+docker run myapp
+
+Screenshot_2026-03-02_11.40.01.png
+
+App runs in staging environment (for testing).
+
+---
+
+###   Production Server
+
+Same image is pulled to production.
+
+ Runs as container in live environment.
+
+
+
+docker search python
+
+ Docker searches Docker Hub for images related to **python**.
+![Docker](images/day7/Screenshot_2026-03-02_11.35.48.png)
+
+docker pull alpine
+![Docker](images/day7/Screenshot_2026-03-02_11.40.01.png)
+
+  `docker ps`
+
+docker ps
+
+ Shows **only running containers**
+
+ `docker ps -a`
+
+ docker ps -a
+
+ Shows **all containers**
+
+- Running
+    
+- Stopped
+    
+- Exited
+
+# One-Line Meaning
+
+`docker ps` = Active containers  
+`docker ps -a` = All containers
+
+
+![Docker](images/day7/Screenshot_2026-03-02_12.12.38.png)
+
+
+
+docker run -d -it --name testing1 ubuntu:latest
+
+---
+
+- `docker run` → Create + start a container
+    
+- `-d` → Run in background (detached mode)
+    
+- `-it` → Interactive terminal
+    
+    - `-i` = interactive
+        
+    - `-t` = terminal
+        
+- `--name testing1` → Container name
+    
+- `ubuntu:latest` → Image name + tag
+
+
+docker exec -it testing1 /bin/bash
+
+### `docker exec`
+![Docker](images/day7/Screenshot_2026-03-02_12.20.12.png)
+
+
+
+Runs a command **inside a running container**.
+
+### 🔹 `-it`
+
+- `-i` → interactive
+    
+- `-t` → terminal
+    
+
+So you can type commands.
+
+### 🔹 `testing1`
+
+Container name.
+
+### 🔹 `/bin/bash`
+
+## `docker run`
+
+ Creates a **new container** and starts it.
+
+Example:
+
+docker run -it ubuntu bash
+
+What happens:
+
+- Pulls image (if not present)
+    
+- Creates container
+    
+- Starts container
+    
+- Runs command (`bash`)
+    
+## `docker exec`
+
+Runs a command inside an **already running container**.
+
+Example:
+
+docker exec -it testing1 bash
+
+What happens:
+
+- Does NOT create new container
+    
+- Enters existing container
+    
+- Runs command inside it
+
+
+docker save ubuntu > test.tar
+
+✅ This saves the **Ubuntu Docker image** into a tar file.
+
+---
+
+## 🔍 What This Does
+
+- `docker save` → Exports a Docker image
+    
+- `ubuntu` → Image name
+    
+- `>` → Redirects output
+    
+- `test.tar` → File that stores the image
+
+![Docker](images/day7/Screenshot_2026-03-02_14.25.06.png)
+![Docker](images/day7/Screenshot_2026-03-02_14.26.40.png)
+## `docker load` 
+
+`docker load` is used to **restore a Docker image** from a `.tar` file that was created using `docker save`.
+![Docker](images/day7/Screenshot_2026-03-02_14.28.42.png)
+![Docker](images/day7/Screenshot_2026-03-02_14.28.52.png)
+
+
+- docker commit httpdrun admin/customwbsever:1.0
+    
+    ✅ Image was created successfully.
+    docker run -d -p 8080:80 --name newhttpd admin/customwbsever:1.0
+    ![Docker](images/day7/Screenshot_2026-03-02_14.34.25.png)
+    ##  docker commit 
+## Step 1: `docker ps -a`
+
+You ran:
+
+docker ps -a
+
+Output shows:
+
+- Container name: **httpdrun**
+    
+- Image: **httpd**
+    
+- Status: **Exited (0)**
+    
+
+This means the container stopped normally.
+
+---
+
+## Step 2: `docker commit`
+
+You ran:
+
+docker commit httpdrun admin/customwbsever:1.0
+
+### What this does:
+
+- Takes the current state of container `httpdrun`
+    
+- Creates a new image from it
+    
+- Names it: `admin/customwbsever`
+    
+- Version tag: `1.0`
+![Docker](images/day7/Screenshot_2026-03-02_16.07.20.png)
+
+---
+
+# Get Container IP
+
+docker inspect testing1 | grep IPAddress
+
+
+![Docker](images/day7/Screenshot_2026-03-02_16.07.20.png)
+
+
+![Docker](images/day7/Screenshot_2026-03-02_16.08.08.png)
