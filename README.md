@@ -1140,7 +1140,7 @@ docker commit httpdrun admin/customwbsever:1.0
 - Names it: `admin/customwbsever`
     
 - Version tag: `1.0`
-![Docker](images/day7/Screenshot_2026-03-02_16.07.20.png)
+![Docker](images/day7/Screenshot_2026-03-02_16.03.00.png)
 
 ---
 
