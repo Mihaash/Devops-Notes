@@ -1154,3 +1154,20 @@ docker inspect testing1 | grep IPAddress
 
 
 ![Docker](images/day7/Screenshot_2026-03-02_16.08.08.png)
+
+## Tagged the Image
+
+You ran:
+
+docker tag admin/customwbsever:1.0 mickey:6.0
+
+ This created a new tag for the same image.
+
+Important:
+
+It does NOT create a new image copy.
+
+It just gives another name (alias) to the same image ID.
+![Docker](images/day7/Screenshot_2026-03-02_16.15.00.png)
+
+Screenshot_2026-03-02_16.15.00.png
