@@ -1171,3 +1171,263 @@ It just gives another name (alias) to the same image ID.
 ![Docker](images/day7/Screenshot_2026-03-02_16.15.00.png)
 
 Screenshot_2026-03-02_16.15.00.png
+
+
+
+
+###  **DAY8**
+### What is `docker stats`?
+
+`docker stats` is a command used to:
+
+>  Monitor the **resource usage of running containers in real time**.
+
+`docker stats`
+
+![Docker](images/day8/Screenshot_2026-03-03_09.39.04.png)
+![Docker](images/day8/Screenshot_2026-03-03_09.39.09.png)
+
+## `FROM`
+
+- Sets the **base image** for the container.
+    
+- First instruction in a Dockerfile.
+    
+
+Example:
+
+FROM ubuntu:latest
+
+---
+
+## `COPY`
+
+- Copies files from **host → container**.
+    
+
+Example:
+
+COPY index.html /var/www/html/
+
+---
+
+## `ADD`
+
+- Similar to COPY but has **extra features**:
+    
+    - Can extract `.tar` files
+        
+    - Can download files from URL
+        
+
+Example:
+
+ADD app.tar.gz /app/
+
+---
+
+## `WORKDIR`
+
+- Sets the **working directory inside the container**.
+    
+
+Example:
+
+WORKDIR /app
+
+---
+
+## `EXPOSE`
+
+- Tells Docker which **port the container will use**.
+    
+
+Example:
+
+EXPOSE 80
+
+---
+
+## `RUN`
+
+- Executes commands **during image build**.
+    
+
+Example:
+
+RUN apt update && apt install apache2 -y
+
+---
+
+## `CMD`
+
+- Defines the **default command** when container starts.
+    
+
+Example:
+
+CMD ["apachectl", "-D", "FOREGROUND"]
+
+---
+
+## `ENTRYPOINT`
+
+- Defines the **main command that always runs**.
+    
+
+Example:
+
+ENTRYPOINT ["nginx"]
+
+---
+
+## `VOLUME`
+
+- Creates a **persistent storage location**.
+    
+
+Example:
+
+VOLUME /data
+
+---
+
+## `USER`
+
+- Specifies which **user runs commands inside container**.
+    
+
+Example:
+
+USER root
+
+---
+
+## `ENV`
+
+- Sets **environment variables**.
+    
+
+Example:
+
+ENV APP_ENV=production
+
+---
+
+## `ARG`
+
+- Defines **build-time variables**.
+    
+
+Example:
+
+ARG VERSION=1.0
+
+
+| Instruction | Purpose                      |
+| ----------- | ---------------------------- |
+| FROM        | Base image                   |
+| COPY        | Copy files                   |
+| ADD         | Copy + extract/download      |
+| WORKDIR     | Set working directory        |
+| EXPOSE      | Declare port                 |
+| RUN         | Execute command during build |
+| CMD         | Default container command    |
+| ENTRYPOINT  | Main container command       |
+| VOLUME      | Persistent storage           |
+| USER        | Set container user           |
+| ENV         | Environment variables        |
+
+![Docker](images/day8/Screenshot_2026-03-03_14.26.45.png)
+
+![Docker](images/day8/Screenshot_2026-03-03_14.30.28.png)
+
+![Docker](images/day8/Screenshot_2026-03-03_14.30.32.png)
+
+![Docker](images/day8/Screenshot_2026-03-03_14.30.41.png)
+
+![Docker](images/day8/Screenshot_2026-03-03_14.31.02.png)
+
+![Docker](images/day8/Screenshot_2026-03-03_14.31.11.png)
+
+##  Network in Docker
+### Bridge Network 
+
+A **Bridge Network** is the **default network type in Docker** used to connect containers on the **same host machine**.
+
+### Host Network 
+
+A **Host Network** means the container uses the **host machine’s network directly**.
+
+### Docker **None Network**
+
+The **None network** means the container has **no network access**.
+
+### What is `docker prune`?
+
+`docker prune` is used to **remove unused Docker resources** to free disk space.
+
+It cleans things like:
+
+- Stopped containers
+    
+- Unused networks
+    
+- Dangling images
+    
+- Build cache
+
+
+
+
+### DAY9
+ Docker Volume Mount Example  
+  
+### Run Container with Volume  
+  
+```bash  
+docker run -d -it --name test1 --mount source=siet,target=/data httpd
+
+### What This Command Does
+
+- `docker run` → Creates and runs a container
+    
+- `-d` → Runs container in background
+    
+- `-it` → Interactive terminal
+    
+- `--name test1` → Container name
+    
+- `--mount source=siet,target=/data` → Mounts Docker volume `siet` to `/data` inside container
+    
+- `httpd` → Apache web server image
+    
+
+---
+
+### Docker Volume Flow
+
+Host Machine  
+   |  
+   |  Docker Volume (siet)  
+   |  
+/var/lib/docker/volumes/siet/_data  
+   |  
+   | mounted to  
+   |  
+Container  
+   |  
+   └── /data
+
+---
+
+### Access Volume Inside Container
+
+docker exec -it test1 /bin/bash  
+cd /data  
+ls
+
+
+
+
+
