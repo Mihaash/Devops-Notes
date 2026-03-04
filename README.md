@@ -1184,8 +1184,8 @@ Screenshot_2026-03-02_16.15.00.png
 
 `docker stats`
 
-![Docker](images/day8/Screenshot_2026-03-03_09.39.04.png)
-![Docker](images/day8/Screenshot_2026-03-03_09.39.09.png)
+![Docker](images/day 8/Screenshot_2026-03-03_09.39.04.png)
+![Docker](images/day 8/Screenshot_2026-03-03_09.39.09.png)
 
 ## `FROM`
 
@@ -1338,17 +1338,17 @@ ARG VERSION=1.0
 | USER        | Set container user           |
 | ENV         | Environment variables        |
 
-![Docker](images/day8/Screenshot_2026-03-03_14.26.45.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.26.45.png)
 
-![Docker](images/day8/Screenshot_2026-03-03_14.30.28.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.30.28.png)
 
-![Docker](images/day8/Screenshot_2026-03-03_14.30.32.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.30.32.png)
 
-![Docker](images/day8/Screenshot_2026-03-03_14.30.41.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.30.41.png)
 
-![Docker](images/day8/Screenshot_2026-03-03_14.31.02.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.31.02.png)
 
-![Docker](images/day8/Screenshot_2026-03-03_14.31.11.png)
+![Docker](images/day 8/Screenshot_2026-03-03_14.31.11.png)
 
 ##  Network in Docker
 ### Bridge Network 
