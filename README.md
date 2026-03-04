@@ -1537,7 +1537,7 @@ Example:
 ![Docker](images/day9/Screenshot_2026-03-04_11.44.55.png)
 
 
-![Docker](images/day8/Screenshot_2026-03-04_11.45.05.png)
+![Docker](images/day9/Screenshot_2026-03-04_11.45.05.png)
 
 ### What is Docker Compose?
 
